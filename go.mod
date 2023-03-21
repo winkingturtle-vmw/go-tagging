@@ -1,4 +1,4 @@
-module github.com/aminjam/test-go-tagging
+module github.com/winkingturtle-vmw/go-tagging
 
 go 1.20
 
