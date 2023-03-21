@@ -6,10 +6,13 @@ type Lib struct {
 	App *cli.App
 }
 
-func New(name string) *cli.App {
+func New(name string) Lib {
 	app := cli.NewApp()
 	app.Name = name
-	return app
+	lib := Lib{
+		App: app,
+	}
+	return lib
 }
 
 func (l *Lib) WithUsage(usage string) {
