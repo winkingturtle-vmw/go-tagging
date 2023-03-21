@@ -21,3 +21,7 @@ func New(name string) Lib {
 func (l *Lib) WithUsage(usage string) {
 	l.App.Usage = usage
 }
+
+func (l *Lib) WithUsageText(usageText string) {
+	l.App.UsageText = usageText
+}
