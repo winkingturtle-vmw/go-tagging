@@ -1,14 +1,17 @@
 package lib
 
-import "github.com/urfave/cli"
+import (
+	"github.com/urfave/cli/v2"
+)
 
 type Lib struct {
 	App *cli.App
 }
 
 func New(name string) Lib {
-	app := cli.NewApp()
-	app.Name = name
+	app := &cli.App{
+		Name: name,
+	}
 	lib := Lib{
 		App: app,
 	}

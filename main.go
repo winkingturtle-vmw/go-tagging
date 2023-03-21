@@ -5,20 +5,20 @@ import (
 	"log"
 	"os"
 
-	"github.com/urfave/cli"
+	"github.com/urfave/cli/v2"
 )
 
 func main() {
-	app := cli.NewApp()
-	app.Name = "greet"
-	app.Usage = "fight the loneliness!"
-	app.Action = func(c *cli.Context) error {
-		fmt.Println("Hello friend!")
-		return nil
+	app := &cli.App{
+		Name:  "greet",
+		Usage: "fight the loneliness!",
+		Action: func(*cli.Context) error {
+			fmt.Println("Hello friend!")
+			return nil
+		},
 	}
 
-	err := app.Run(os.Args)
-	if err != nil {
+	if err := app.Run(os.Args); err != nil {
 		log.Fatal(err)
 	}
 }
