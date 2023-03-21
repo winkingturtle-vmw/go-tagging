@@ -25,3 +25,7 @@ func (l *Lib) WithUsage(usage string) {
 func (l *Lib) WithUsageText(usageText string) {
 	l.App.UsageText = usageText
 }
+
+func (l *Lib) WithArgsUsage(args string) {
+	l.App.ArgsUsage = args
+}
