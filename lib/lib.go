@@ -11,3 +11,7 @@ func New(name string) *cli.App {
 	app.Name = name
 	return app
 }
+
+func (l *Lib) WithUsage(usage string) {
+	l.App.Usage = usage
+}
