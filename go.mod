@@ -1,4 +1,4 @@
-module github.com/winkingturtle-vmw/go-tagging/v2
+module github.com/winkingturtle-vmw/go-tagging
 
 go 1.20
 
